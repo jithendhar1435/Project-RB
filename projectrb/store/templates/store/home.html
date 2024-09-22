@@ -1,0 +1,16 @@
+<!-- templates/store/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Welcome to Our Store</h1>
+    <h2>Categories</h2>
+    <ul>
+        {% for category in categories %}
+        <li><a href="{% url 'store:category_detail' category.id %}">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
